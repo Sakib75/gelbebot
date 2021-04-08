@@ -3,10 +3,9 @@ import os
 import smtplib
 from email.message import EmailMessage
 
-sender = os.environ['Sender']
-receiver = os.environ['Receiver']
-password = os.environ['Password']
-
+sender = "leadgensakib@gmail.com"
+receiver = "leadgensakib@gmail.com"
+password = "sakib7575"
 
    
    
