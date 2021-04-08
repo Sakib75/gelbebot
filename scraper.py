@@ -5,7 +5,7 @@ import pandas as pd
 import logging
 import sys
 import os
-
+from send_email import SendMail
 city = 'Essen'
 
 try:
@@ -92,3 +92,4 @@ for i in range(0,len(df)):
 	df.to_csv(f'{city}.csv')
 
 
+SendMail()
