@@ -19,7 +19,6 @@ def Check_Dif(city):
 
 	dif_list = [x for x in list(df1['heading'].unique()) if x not in list(df2['heading'].unique())]
 	print(dif_list)
-	if(len(dif_list)):
 
 	dfdif = df1[(df1['heading'].isin(dif_list))]
 
