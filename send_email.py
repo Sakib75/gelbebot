@@ -4,7 +4,7 @@ import smtplib
 from email.message import EmailMessage
 
 sender = "leadgensakib@gmail.com"
-receiver = "leadgensakib@gmail.com"
+receiver = "SJ.Immobilie@gmail.comm"
 password = "sakib7575"
 
    
@@ -19,7 +19,7 @@ def Check_Dif(city):
 
 	dif_list = [x for x in list(df1['heading'].unique()) if x not in list(df2['heading'].unique())]
 	print(dif_list)
-	print(len(dif_list))
+	if(len(dif_list)):
 
 	dfdif = df1[(df1['heading'].isin(dif_list))]
 
@@ -35,7 +35,7 @@ def Check_Dif(city):
 
 def SendMail():
 	new = Check_Dif('Essen')
-	if(new):
+	if(new['diff']):
 
 		df_test = new['df'].reset_index()[['heading','website','status']].fillna('')
 
